@@ -1,6 +1,6 @@
 x- find node package for mqtt
 x- create way to send commands mqtt
-- create a python receiver for mqtt
+x- create a python receiver for mqtt
 - install mosquitto on raspberry pi
 - fix hard coded reference for mqtt
 
@@ -8,3 +8,8 @@ x- create way to send commands mqtt
 - raspberry pi side
 
 sudo apt-get install mosquitto
+
+
+key links
+- https://www.ev3dev.org/docs/tutorials/sending-and-receiving-messages-with-mqtt/
+

@@ -12,7 +12,7 @@ def on_message(client, userdata, msg):
   print(msg.payload.decode())
     
 client = mqtt.Client()
-client.connect("192.168.1.23",1883,60)
+client.connect("test.mosquitto.org",1883,60)
 
 client.on_connect = on_connect
 client.on_message = on_message

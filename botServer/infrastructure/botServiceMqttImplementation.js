@@ -1,11 +1,11 @@
 var mqtt = require('mqtt');
-var client = mqtt.connect('mqtt://localhost');
+var client = mqtt.connect('mqtt://test.mosquitto.org');
 
 client.on('connect', function() {
   console.log('** connection');
-  client.subscribe('presence', function(err) {
+  client.subscribe('topic/bot', function(err) {
     if (!err) {
-      console.log('** presence connected');
+      console.log('** topic/bot connected');
     }
   });
 });
