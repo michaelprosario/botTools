@@ -1,4 +1,10 @@
-- create way to send commands through serial port
-- create way to configure the serial port
-- create a python receiver for serial communication
-- connect python receiver to ev3 code
+x- find node package for mqtt
+x- create way to send commands mqtt
+- create a python receiver for mqtt
+- install mosquitto on raspberry pi
+- fix hard coded reference for mqtt
+
+
+- raspberry pi side
+
+sudo apt-get install mosquitto
