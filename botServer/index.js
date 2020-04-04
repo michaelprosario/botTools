@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const botService = require('./core/services/botService.js');
-const botServiceImplementation = require('./infrastructure/botServiceTestImplementation');
+const botServiceImplementation = require('./infrastructure/botServiceSerialImplementation');
 
 const implementation = new botServiceImplementation.botServiceImplementation();
 const service = new botService.BotService(implementation);
