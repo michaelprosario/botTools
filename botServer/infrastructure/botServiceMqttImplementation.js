@@ -1,5 +1,6 @@
 var mqtt = require('mqtt');
 var client = mqtt.connect('mqtt://test.mosquitto.org');
+var topicChannel = 'topic/bot';
 
 client.on('connect', function() {
   console.log('** connection');
@@ -12,22 +13,27 @@ client.on('connect', function() {
 
 module.exports.botServiceImplementation = class BotServiceTestImplementation {
   forward() {
-    client.publish('topic/bot', 'forward');
+    client.publish(topicChannel, 'forward');
     return 'forward sent';
   }
 
   back() {
-    client.publish('topic/bot', 'back');
+    client.publish(topicChannel, 'back');
     return 'back sent';
   }
 
   left() {
-    client.publish('topic/bot', 'left');
+    client.publish(topicChannel, 'left');
     return 'left sent';
   }
 
   right() {
-    client.publish('topic/bot', 'right');
+    client.publish(topicChannel, 'right');
     return 'right sent';
+  }
+
+  right() {
+    client.publish(topicChannel, 'stop');
+    return 'stop sent';
   }
 };

@@ -1,24 +1,25 @@
-
-module.exports.BotService = class BotService{
-
-  constructor(botServiceImplementation){
+module.exports.BotService = class BotService {
+  constructor(botServiceImplementation) {
     this.serviceImplementation = botServiceImplementation;
   }
 
-  forward(){
+  forward() {
     return this.serviceImplementation.forward();
   }
 
-  back(){
+  back() {
     return this.serviceImplementation.back();
   }
 
-  left(){
+  left() {
     return this.serviceImplementation.left();
   }
 
-  right(){
+  right() {
     return this.serviceImplementation.right();
   }
 
-}
+  stop() {
+    return this.serviceImplementation.stop();
+  }
+};

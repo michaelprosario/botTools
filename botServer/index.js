@@ -6,6 +6,10 @@ const botServiceImplementation = require('./infrastructure/botServiceMqttImpleme
 const implementation = new botServiceImplementation.botServiceImplementation();
 const service = new botService.BotService(implementation);
 
+app.get('/stop', (req, res) => {
+  res.send(service.stop());
+});
+
 app.get('/forward', (req, res) => {
   res.send(service.forward());
 });
