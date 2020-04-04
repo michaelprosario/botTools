@@ -32,7 +32,7 @@ module.exports.botServiceImplementation = class BotServiceTestImplementation {
     return 'right sent';
   }
 
-  right() {
+  stop() {
     client.publish(topicChannel, 'stop');
     return 'stop sent';
   }
