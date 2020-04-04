@@ -1,0 +1,4 @@
+- create way to send commands through serial port
+- create way to configure the serial port
+- create a python receiver for serial communication
+- connect python receiver to ev3 code
