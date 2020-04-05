@@ -73,14 +73,27 @@ def on_message(client, userdata, msg):
   print(k)
   if k == 'forward':
     forward()
+    time.sleep(2)
+    stop()
+
   if k == 'back':
     back()
+    time.sleep(2)
+    stop()
+
   if k == 'left':
     left()
+    time.sleep(2)
+    stop()
+
   if k == 'right':
     right()
+    time.sleep(2)
+    stop()
+
   if k == 'stop':
     stop()
+
   if k == 'quit':
     exit()
     
