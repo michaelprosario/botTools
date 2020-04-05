@@ -98,7 +98,7 @@ def on_message(client, userdata, msg):
     exit()
     
 client = mqtt.Client()
-client.connect("test.mosquitto.org",1883,60)
+client.connect("192.168.1.24",1883,60)
 client.on_connect = on_connect
 client.on_message = on_message
 client.loop_forever()

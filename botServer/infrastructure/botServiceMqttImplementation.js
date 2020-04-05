@@ -1,10 +1,10 @@
 var mqtt = require('mqtt');
-var client = mqtt.connect('mqtt://test.mosquitto.org');
+var client = mqtt.connect('mqtt://192.168.1.24');
 var topicChannel = 'topic/bot';
 
-client.on('connect', function() {
+client.on('connect', function () {
   console.log('** connection');
-  client.subscribe('topic/bot', function(err) {
+  client.subscribe('topic/bot', function (err) {
     if (!err) {
       console.log('** topic/bot connected');
     }
