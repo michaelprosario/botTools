@@ -6,6 +6,7 @@ const botServiceImplementation = require('./infrastructure/botServiceMqttImpleme
 const implementation = new botServiceImplementation.botServiceImplementation();
 const service = new botService.BotService(implementation);
 
+app.use(express.static('public'));
 app.get('/stop', (req, res) => {
   res.send(service.stop());
 });
